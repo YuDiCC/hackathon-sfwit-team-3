@@ -78,10 +78,10 @@ Generamos una apiRest con patrón de diseño MVC en Spring Boot con estructura:
 |  | Implementación de Servicios | Logica del negocio
 
 Implementamos 3 perfiles en Spring Boot, 2 de desarrollo y 1 de producción, esto con la finalidad de poder realizar las pruebas de los endpoints y el CRUD a través de Postman de manera local en postgres y/o con el gestor de Base de Datos en memoria H2.
-Para el ambiente de producción realizamos el despliegue del api en Heroku, configurando una base Postgres.
+Para el ambiente de producción realizamos el despliegue del api en Heroku, configurando una base Postgres.       
 [Heroku APP](https://hackathon-sfwit-team3.herokuapp.com/)
 
-Los endpoints fueron diseñados y probados en Postman, con la liga de Heroku como baseUrl.
+Los endpoints fueron diseñados y probados en Postman, con la liga de Heroku como baseUrl.        
 [Collección en Postman](https://www.getpostman.com/collections/cda1eb3b28ae2bee5c2a)
 
 > **Mobile**
