@@ -2,53 +2,42 @@ package com.hackathonteam3.api.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="students")
-public class StudentModel {
-	
+@Table(name="universities")
+public class University {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Long id;
 	
 	@Column
 	private String name;
-	private String lastname;
-	private String tuition;
+	private String description;
+	private String contact;
 	private String country;
 	private String address;
 	
-	@JoinColumn(name="user_id", unique=true)
-	@OneToOne(fetch = FetchType.LAZY)
-	private UserModel user;
-	
-	public StudentModel(){
-		
+	public University() {
 	}
 	
-	public StudentModel(Long id, String name, String lastname, String tuition, String country, String address,
-			UserModel user) {
+	public University(Long id, String name, String description, String contact, String country, String address) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.lastname = lastname;
-		this.tuition = tuition;
+		this.description = description;
+		this.contact = contact;
 		this.country = country;
 		this.address = address;
-		this.user = user;
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
-	
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -58,17 +47,17 @@ public class StudentModel {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getLastname() {
-		return lastname;
+	public String getDescription() {
+		return description;
 	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setDescription(String description) {
+		this.description = description;
 	}
-	public String getTuition() {
-		return tuition;
+	public String getContact() {
+		return contact;
 	}
-	public void setTuition(String tuition) {
-		this.tuition = tuition;
+	public void setContact(String contact) {
+		this.contact = contact;
 	}
 	public String getCountry() {
 		return country;
@@ -82,11 +71,5 @@ public class StudentModel {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public UserModel getUser() {
-		return user;
-	}
-	public void setUser(UserModel user) {
-		this.user = user;
-	}
-		
+	
 }
