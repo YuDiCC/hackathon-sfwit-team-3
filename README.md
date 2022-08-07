@@ -62,7 +62,7 @@ Decidimos realizar la solución del problema 2
 Se diseñó una base de datos relacionada para cubrir las historias de usuario   
 [Base de Datos](https://drive.google.com/file/d/1zzr6J8IBkXSWRGNwDT1z8zyG5WHFdBsU/view?usp=sharing)
 
-#### Soluciones
+### Soluciones
 
 > **Backend**
 
