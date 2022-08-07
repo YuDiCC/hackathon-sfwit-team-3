@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hackathonteam3.api.models.UserModel;
+import com.hackathonteam3.api.models.User;
 import com.hackathonteam3.api.repositories.UserJpaRepository;
 
 @Service
@@ -16,22 +16,22 @@ public class UserServiceImpl implements UserService{
 	UserJpaRepository repositorio;
 
 	@Override
-	public UserModel createUserService(UserModel user) {
+	public User saveUser(User user) {
 		return repositorio.save(user);
 	}
 
 	@Override
-	public List<UserModel> getUsersService() {
+	public List<User> getUsers() {
 		return repositorio.findAll();
 	}
 	
 	@Override
-	public Optional<UserModel> getUserService(Long id) {
+	public Optional<User> getUser(Long id) {
 		return repositorio.findById(id);
 	}
 
 	@Override
-	public UserModel updateUserService(Long id, UserModel user) {
+	public User updateUser(Long id, User user) {
 		return repositorio.findById(id)
 				.map(userfound -> {
 					userfound.setEmail(user.getEmail());
@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService{
 		}
 
 	@Override
-	public void deleteUserService(Long id) {
+	public void deleteUser(Long id) {
 		repositorio.deleteById(id);
 		
 	}

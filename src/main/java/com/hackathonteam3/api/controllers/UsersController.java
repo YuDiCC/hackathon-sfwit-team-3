@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hackathonteam3.api.models.UserModel;
+import com.hackathonteam3.api.models.User;
 import com.hackathonteam3.api.services.UserService;
 
 @RestController
@@ -21,36 +21,36 @@ import com.hackathonteam3.api.services.UserService;
 public class UsersController {
 	
 	@Autowired
-	UserService userService;
+	UserService uServ;
 
 	//Endpoint para crear usuario
 		@PostMapping("/")
-		public UserModel createUser( @RequestBody UserModel user) {
-			return userService.createUserService(user);
+		public User createUser( @RequestBody User user) {
+			return uServ.saveUser(user);
 		}
 		
 		//Endpoint para ver todos los usuarios
 		@GetMapping("/")
-		public List<UserModel> readUser() {
-			return userService.getUsersService();
+		public List<User> readUsers() {
+			return uServ.getUsers();
 		}
 		
 		//Endpoint para ver un usuario
 		@GetMapping("/{id}")
-		public Optional<UserModel> readUser(@PathVariable Long id) {
-			return userService.getUserService(id);
+		public Optional<User> readUser(@PathVariable Long id) {
+			return uServ.getUser(id);
 		}
 		
 		//Endpoint para actualizar un usuario por Id
 		@PatchMapping("/{id}")
-		public UserModel updateUser(@PathVariable("id") Long id, @RequestBody UserModel user) {
-			return userService.updateUserService(id,user);
+		public User updateUser(@PathVariable("id") Long id, @RequestBody User user) {
+			return uServ.updateUser(id,user);
 		}
 		
 		//Endpoint para eliminar un usuario por Id
 		@DeleteMapping("/{id}")
 		public void deleteUser(@PathVariable("id") Long id) {
-			userService.deleteUserService(id);
+			uServ.deleteUser(id);
 		}
 	
 

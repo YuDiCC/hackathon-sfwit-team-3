@@ -1,21 +1,19 @@
 package com.hackathonteam3.api.models;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="users")
-public class UserModel {
+public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private Long id;
 	
 	@Column
@@ -24,21 +22,19 @@ public class UserModel {
 	private Boolean status;
 	private Boolean is_student;
 	
-	@OneToOne(mappedBy="user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-	private StudentModel student;
 
-	public UserModel() {
+
+	public User() {
 		super();
 	}
 
-	public UserModel(Long id, String email, String password, Boolean status, Boolean is_student, StudentModel student) {
+	public User(Long id, String email, String password, Boolean status, Boolean is_student) {
 		super();
 		this.id = id;
 		this.email = email;
 		this.password = password;
 		this.status = status;
 		this.is_student = is_student;
-		this.student = student;
 	}
 	
 	public Long getId() {
@@ -71,11 +67,6 @@ public class UserModel {
 	public void setIs_student(Boolean is_student) {
 		this.is_student = is_student;
 	}
-	public StudentModel getStudent() {
-		return student;
-	}
-	public void setStudent(StudentModel student) {
-		this.student = student;
-	}
-	
 }
+
+	

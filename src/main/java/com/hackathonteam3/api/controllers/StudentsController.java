@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hackathonteam3.api.models.StudentModel;
+import com.hackathonteam3.api.models.Student;
+import com.hackathonteam3.api.request.StudentRequest;
 import com.hackathonteam3.api.services.StudentService;
 
 @RestController
@@ -25,25 +26,25 @@ public class StudentsController {
 	
 	//Endpoint para crear estudiante
 	@PostMapping("/")
-	public StudentModel createStudent( @RequestBody StudentModel student) {
-		return studentService.createStudentService(student);
+	public Optional<Student> createStudent( @RequestBody StudentRequest sRequest) {
+		return studentService.createStudentService(sRequest);
 	}
 	
 	//Endpoint para ver todos los estudiantes
 	@GetMapping("/")
-	public List<StudentModel> readStudents() {
+	public List<Student> readStudents() {
 		return studentService.getStudentsService();
 	}
 	
 	//Endpoint para ver un estudiante
 	@GetMapping("/{id}")
-	public Optional<StudentModel> readStudent(@PathVariable Long id) {
+	public Optional<Student> readStudent(@PathVariable Long id) {
 		return studentService.getStudentService(id);
 	}
 	
 	//Endpoint para actualizar un estudiante por Id
 	@PatchMapping("/{id}")
-	public StudentModel updateStudent(@PathVariable("id") Long id, @RequestBody StudentModel student) {
+	public Student updateStudent(@PathVariable("id") Long id, @RequestBody Student student) {
 		return studentService.updateStudentService(id,student);
 	}
 	
