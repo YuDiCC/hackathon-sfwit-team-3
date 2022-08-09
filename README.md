@@ -6,7 +6,7 @@
 | Faviola Carrillo | Backend Spring Boot | FaviolaCarrillo#1378 |
 | Sonia Mae | Backend Spring Boot | Sonia Mae#5039 | 
 | Tania Zitle | Backend Spring Boot | Tania.Zitle#9420 | [TaniaZitle](https://github.com/TaniaZitle)
-| YuDi CC | Mobile React Native | YuDi CC#3066 | 
+| YuDi CC | Mobile React Native | YuDi CC#3066 | [YuDiCC](https://github.com/YuDiCC)
 
 ##  Problemática a resolver
 1. Instituciones y organizaciones internacionales becan a estudiantes para que puedan realizar licenciaturas, maestrías y doctorados en el extranjero pero no se tiene un seguimiento de estos estudiantes.
