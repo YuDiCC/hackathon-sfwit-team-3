@@ -6,7 +6,7 @@
 | Faviola Carrillo | Backend Spring Boot | FaviolaCarrillo#1378 |
 | Sonia Mae | Backend Spring Boot | Sonia Mae#5039 | 
 | Tania Zitle | Backend Spring Boot | Tania.Zitle#9420 | [TaniaZitle](https://github.com/TaniaZitle)
-| YuDi CC | Mobile React Native | YuDi CC#3066 | 
+| YuDi CC | Mobile React Native | YuDi CC#3066 | [YuDiCC](https://github.com/YuDiCC)
 
 ##  Problemática a resolver
 1. Instituciones y organizaciones internacionales becan a estudiantes para que puedan realizar licenciaturas, maestrías y doctorados en el extranjero pero no se tiene un seguimiento de estos estudiantes.
@@ -86,4 +86,35 @@ Los endpoints fueron diseñados y probados en Postman, con la liga de Heroku com
 
 > **Mobile**
 
+✨✨**La idea principal de la creación de este bot es que al conversar con el usuario le pregunte por sus intereses y el usuario pueda seleccionarlos a través de un menu y cada respuesta el bot le envie una lista de las escuelas o instituciones disponibles que se relacionen con las carreras. Así mismo, invitarlos a un chat grupal de ese interés en la cual vendría funcionando para interactuar con otros usuarios con un interés en común, además de que las universidades tengan acceso a dicho chat y realicen sus promociones u actividades**
 
+
+Se plantearon las siguientes soluciones de las cuales se tratan de la creacion de un bot en la red social de telegram realizada a traves del bot "general" BotFather donde se crea el perfil de nuestro bot, donde debemos colocar el nombre de usuario, la foto de perfil y la descripcion de la cuenta. 
+
+Para esto se utilizó los siguientes comandos: 
+| Comando | Descripción | 
+| ------ | ------ |
+| /newbot | Para crear un nuevo bot |
+| /setname | Cambia el nombre del bot |
+| /setdescription | Modifica la descripción |
+| /setuserpic | Cambiar la imagen de perfil del bot |
+
+Los comandos anteriores son los básicos como el de /cancel y /token, entre otros comandos que se pueden integrar al bot para realizar más operaciones si hace lo requiere. El token nos servirá para administrar el bot.
+
+Sin embargo en la plataforma de Telegram podemos encontrar otros asistentes online que nos ayudará para darle mejoras a los comandos, ademas que agregan otras funciones como creacion de un menú, botones, personalizar tus propios comandos y hacer posible que el bot pueda entablar una conversacion con una persona u enviar mensajes por defecto e inclusive realizar publicaciones en otra red social como Twitter.
+
+- Para lograr esto usamos Manybot una de las alternativas más populares que ademas todo la magia se logra en la misma plataforma solo enviando el token del bot creado. 
+
+- Otra opción es MenuBuilderBot que es similar a los demas bot pero incluyendo los botones y funcionalidades propias.
+
+✨✨**La otra solución es la creación de una página en la cual el estudiante podra elegir sus intereses y al hacer clic en ellas se muestra las universidades o instituciones que esten disoponibles y que este relacionado las carreras que imparten con los intereses del usuario y al elegir la institución que mas le agrade lo redirige a la página principal de la escuela**
+
+https://drive.google.com/file/d/15YCTKG-hxsPOkU-zc5SXqbgVWYeL6_Ua/view?usp=sharing
+
+- La pagina principal muestra información como una breve introducción 
+- Las categorías o intereses disponibles para que el usuario elija
+    - Al hacer clic en cualquier interés de su preferencia se muetra otra página con las universidades disponibles
+    - Las escuelas se irán actualizando de acuerdo a la disponibilidad 
+    - al hacer clic en cada institución se rediriger al usuario a la página princiapal de aquella institución 
+- Se muestra la información de contacto y las redes sociales de la página 
+- Un espacio par que el usuario se registre y pueda tener más accesibilidad o mayor información a través de su correo
